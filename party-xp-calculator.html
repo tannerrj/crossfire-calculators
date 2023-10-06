@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossfire Party XP Calculator</title>
+
+	
+<style type="text/css">
+<!--
+td {
+  vertical-align: top;
+}
+-->
+</style>	
+
+<script language="JavaScript">
+<!--
+function add() {
+  // (A) get the value from the form text boxes
+  // NOTE - the value(s) are integers
+  var a = parseInt(document.getElementById("varA").value);
+  var b = parseInt(document.getElementById("varB").value);
+
+  // (B) do the math - use addition
+  console.log(typeof a); // number
+  console.log(typeof b); // number
+  var result = a + 4 + b + 4;
+
+  // (C) show the results
+  // Need to use "innerHTML" instead of "value" for a div element
+  document.getElementById("varResult2").innerHTML = result;
+  return false; // Stop form submit
+}
+//-->
+</script>
+>
+	
+	
+	
+<script language="JavaScript">
+<!--
+function addPartyOf3 () {
+  // (A) get the value from the form text boxes
+  // NOTE - the value(s) are integers
+  var c = parseInt(document.getElementById("varC").value);
+  var d = parseInt(document.getElementById("varD").value);
+  var e = parseInt(document.getElementById("varE").value);
+
+  // (B) do the math - use addition
+  console.log(typeof c); // number
+  console.log(typeof d); // number
+  console.log(typeof e); // number
+  var result = c + 4 + d + 4 + e + 4;
+
+  // (C) show the results
+  // Need to use "innerHTML" to set the content of a div element, not "value"
+  document.getElementById("varResult3").innerHTML = result;
+  return false; // Stop form submit
+};
+//-->
+</script>
+
+
+	
+	
+	
+<script language="JavaScript">
+<!--
+function addPartyOf4 () {
+  // (A) get the value from the form text boxes
+  // NOTE - the value(s) are integers
+  var w = parseInt(document.getElementById("varW").value);
+  var x = parseInt(document.getElementById("varX").value);
+  var y = parseInt(document.getElementById("varY").value);
+  var z = parseInt(document.getElementById("varZ").value);
+
+  // (B) do the math - use additionE
+  console.log(typeof w); // number
+  console.log(typeof x); // number
+  console.log(typeof y); // number
+  console.log(typeof z); // number
+  var result = w + 4 + x + 4 + y + 4 + z + 4;
+
+  // (C) show the results
+  // Need to use "innerHTML" instead of "value" for a div element
+  document.getElementById("varResult4").innerHTML = result;
+  return false; // Stop form submit
+};
+
+//-->
+</script>
+
+
+</head>
+
+<body>
+
+<h1>Crossfire Party XP Calculator</h1>
+<p>Depending on how many people you have in your party, enter each player's level and click the Calculate XP button to find out the Experience (XP) needed per monster kill for each member to gain XP.</p>
+<p>The form requires at least two (2) character levels (minimum level 1, maximum level 115) in order to function.</p>
+<p>This table does NOT calculate how much XP goes to each player; the higher level player (if that applies...) get more XP than the lower level character(s).</p>
+
+<table width="100%" border="1">
+    <tbody>
+    <tr>
+        <td width="33%">
+            <form onsubmit="event.preventDefault(); add();">
+                Player 1 =
+                <input type="number" required="required" id="varA" max="115" min="1" />
+                <br>
+                Player 2 =
+                <input type="number" required="required" id="varB" max="115" min="1" />
+                <p>&nbsp;</p>
+                <input type="submit" value="Calculate XP for 2 Players"/>
+                <p>&nbsp;</p>
+                Total XP Required per monster kill by the Party = <br>
+                <input type="number" id="varResult2" readonly/>
+                <p>&nbsp;</p>
+            </form>
+        </td>
+        <td width="34%">
+            <form onsubmit="event.preventDefault(); addPartyOf3();">
+                Player 1 =
+                <input type="number" required="required" id="varC" max="115" min="1" />
+                <br>
+                Player 2 =
+                <input type="number" required="required" id="varD" max="115" min="1" />
+                <br>
+                Player 3 =
+                <input type="number" id="varE" max="115" min="0" />
+                <p>&nbsp;</p>
+                <input type="submit" value="Calculate XP for 3 Players"/>
+                <p>&nbsp;</p>
+                Total XP Required per monster kill by the Party = <br>
+                <input type="number" id="varResult3" readonly/>
+                <p>&nbsp;</p>
+            </form>
+        </td>
+        <td width="33%">
+            <form onsubmit="event.preventDefault(); addPartyOf4();">
+                Player 1 =
+                <input type="number" required="required" id="varW" max="115" min="1" />
+                <br>
+                Player 2 =
+                <input type="number" required="required" id="varX" max="115" min="1" />
+                <br>
+                Player 3 =
+                <input type="number" id="varY" max="115" min="0" />
+                <br>
+                Player 4 =
+                <input type="number" id="varZ" max="115" min="0" />
+                <p>&nbsp;</p>
+                <input type="submit" value="Calculate XP for 4 Players"/>
+                <p>&nbsp;</p>
+                Total XP Required per monster kill by the Party = <br>
+                <input type="number" id="varResult4" readonly/>
+                <p>&nbsp;</p>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<h2>More Details</h2>
+<p>Party or shared experience works like this; The server creates a number of "shares" which is the total overall levels of every player in the party, plus 4 for each player. Then the experience is divided up by how many "shares" each group member adds to the total number. That means the experience of the monster has to be at least the sum of the party member levels added together plus 4 * N, where N is the number of members in the party.</p>
+<p>Example: (Level 109 + Level 11 = 120) + (4 (for the level 109 character) + 4 (for the level 11 character)) = 128; the party needs to kill monsters worth at least 128 XP in order to gain experience</p>
+<p>If the monsters that the group is killing give too little (or low) experience to start with, rounding might cause you to be getting no experience.</p>
+<p>Also remember that all members of the party need to be on the same map in order to "share" experience.</p>
+<p>And whatever skill is used to slay the monster(s), the XP goes to that skill category for all party members if they have such skill. Otherwise, the XP is added as general XP to the player(s) overall XP tally.</p>
+<p>Example: A character is using clawing to kill goblins; unless all other party members are Quetzecoatl or Dragon or serpent men characters, the gained XP would go to their total XP and not to any skill. If that same character switches to another common skill like punching or karate, then there is a chance for the rest of the party to get a share of the XP (assuming they have karate or punching)</p>
+<hr>
+
+</body>
+</html>
