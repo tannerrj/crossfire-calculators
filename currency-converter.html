@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Crossfire Currency Converter</title>
+<script type="text/javascript">
+<!--
+function amberiumConverter() {
+    var amberiumValue = parseFloat(document.converter.amberium.value);
+    if (!isNaN(amberiumValue)) {
+        document.converter.jade.value = amberiumValue * 100.0;
+        document.converter.platinum.value = amberiumValue * 10000.0;
+        document.converter.gold.value = amberiumValue * 50000.0;
+        document.converter.silver.value = amberiumValue * 500000.0;
+    } else {
+        // Handle the case where the input is not a valid number.
+        alert("Please enter a valid number for Amberium.");
+    }
+}
+
+function jadeConverter() {
+    var jadeValue = parseFloat(document.converter.jade.value);
+    if (!isNaN(jadeValue)) {
+        document.converter.amberium.value = jadeValue * 0.01;
+        document.converter.platinum.value = jadeValue * 100.0;
+        document.converter.gold.value = jadeValue * 500.0;
+        document.converter.silver.value = jadeValue * 5000.0;
+    } else {
+        // Handle the case where the input is not a valid number.
+        alert("Please enter a valid number for Jade.");
+    }
+}
+
+function platinumConverter() {
+    var platinumValue = parseFloat(document.converter.platinum.value);
+    if (!isNaN(platinumValue)) {
+        document.converter.amberium.value = platinumValue * 0.0001;
+        document.converter.jade.value = platinumValue * 0.01;
+        document.converter.gold.value = platinumValue * 5.0;
+        document.converter.silver.value = platinumValue * 50.0;
+    } else {
+        // Handle the case where the input is not a valid number.
+        alert("Please enter a valid number for Platinum.");
+    }
+}
+
+function goldConverter() {
+    var goldValue = parseFloat(document.converter.gold.value);
+    if (!isNaN(goldValue)) {
+        document.converter.amberium.value = goldValue * 50000.0;
+        document.converter.jade.value = goldValue * 500.0;
+        document.converter.platinum.value = goldValue * 5.0;
+        document.converter.silver.value = goldValue * 10.0;
+    } else {
+        // Handle the case where the input is not a valid number.
+        alert("Please enter a valid number for Gold.");
+    }
+}
+
+function silverConverter() {
+    var silverValue = parseFloat(document.converter.silver.value);
+    if (!isNaN(silverValue)) {
+        document.converter.amberium.value = silverValue * 0.000005;
+        document.converter.jade.value = silverValue * 0.0005;
+        document.converter.platinum.value = silverValue * 0.05;
+        document.converter.gold.value = silverValue * 0.1;
+    } else {
+        // Handle the case where the input is not a valid number.
+        alert("Please enter a valid number for Silver.");
+    }
+}
+//-->
+</script>
+
+</head>
+
+<body>
+	<h1>Crossfire Currency Converter</h1>
+	<p>Enter a value in any one field and click the Convert button to convert the value to other currencies.</p>
+<form name="converter">
+  <table border="0">
+    <tr>
+      <td>Amberium:</td>
+      <td><input type="text" name="amberium" onChange="amberiumConverter()" /></td>
+    </tr>
+    <tr>
+      <td>Jade:</td>
+      <td><input type="text" name="jade" onChange="jadeConverter()" /></td>
+    </tr>
+    <tr>
+      <td>Platinum:</td>
+      <td><input type="text" name="platinum" onChange="platinumConverter()" /></td>
+    </tr>
+    <tr>
+      <td>Gold:</td>
+      <td><input type="text" name="gold" onChange="goldConverter()" /></td>
+    </tr>
+    <tr>
+      <td>Silver:</td>
+      <td><input type="text" name="silver" onChange="silverConverter()" /></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="button" value="Convert" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
