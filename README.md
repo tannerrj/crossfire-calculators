@@ -9,6 +9,10 @@ The calculators are HTML and javascript based pages to perform functions such as
 
 ### Requirements
 
+A web browser with javascript enabled.
+
+## Usage
+
 The web pages are self contained in that the necessary html elements and javascript are all within the one web page file, so open the file in a browser and it should work. 
 
 ## Questions:
