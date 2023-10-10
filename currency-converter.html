@@ -47,9 +47,9 @@ function platinumConverter() {
 function goldConverter() {
     var goldValue = parseFloat(document.converter.gold.value);
     if (!isNaN(goldValue)) {
-        document.converter.amberium.value = goldValue * 50000.0;
-        document.converter.jade.value = goldValue * 500.0;
-        document.converter.platinum.value = goldValue * 5.0;
+        document.converter.amberium.value = goldValue * 0.00002;
+        document.converter.jade.value = goldValue* 0.002;
+        document.converter.platinum.value = goldValue * 0.2;
         document.converter.silver.value = goldValue * 10.0;
     } else {
         // Handle the case where the input is not a valid number.
@@ -141,9 +141,9 @@ function silverConverter() {
     </tr>
     <tr>
       <th scope="row">Gold</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
+      <td>0.00002</td>
+      <td>0.002</td>
+      <td>0.2</td>
       <td>1</td>
       <td>10</td>
     </tr>
