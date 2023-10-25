@@ -15,6 +15,12 @@ A web browser with javascript enabled.
 
 The web pages are self contained in that the necessary html elements and javascript are all within the one web page file, so open the file in a browser and it should work. 
 
+## Contributing
+
+ * Contributions are welcome.
+ * Pull requests are welcome.
+ * Creating a fork on this code base is also welcome.
+
 ## Questions:
 
 I can be reached via [tannerrj GitHub Profile](https://github.com/tannerrj)
