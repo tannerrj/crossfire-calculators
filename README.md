@@ -21,7 +21,7 @@ The web pages are self contained in that the necessary html elements and javascr
  * Pull requests are welcome.
  * Creating a fork on this code base is also welcome.
 
-## Questions:
+## Questions
 
 I can be reached via [tannerrj GitHub Profile](https://github.com/tannerrj)
 
