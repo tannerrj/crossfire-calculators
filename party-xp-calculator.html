@@ -28,13 +28,12 @@ function add() {
   var result = a + 4 + b + 4;
 
   // (C) show the results
-  // Need to use "innerHTML" instead of "value" for a div element
-  document.getElementById("varResult2").innerHTML = result;
+  document.getElementById("varResult2").value = result;
   return false; // Stop form submit
 }
 //-->
 </script>
->
+
 	
 	
 	
@@ -54,8 +53,7 @@ function addPartyOf3 () {
   var result = c + 4 + d + 4 + e + 4;
 
   // (C) show the results
-  // Need to use "innerHTML" to set the content of a div element, not "value"
-  document.getElementById("varResult3").innerHTML = result;
+  document.getElementById("varResult3").value = result;
   return false; // Stop form submit
 };
 //-->
@@ -83,8 +81,7 @@ function addPartyOf4 () {
   var result = w + 4 + x + 4 + y + 4 + z + 4;
 
   // (C) show the results
-  // Need to use "innerHTML" instead of "value" for a div element
-  document.getElementById("varResult4").innerHTML = result;
+  document.getElementById("varResult4").value = result;
   return false; // Stop form submit
 };
 
