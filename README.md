@@ -13,7 +13,12 @@ A web browser with javascript enabled.
 
 ## Usage
 
-The web pages are self contained in that the necessary html elements and javascript are all within the one web page file, so open the file in a browser and it should work. 
+The web pages are self contained in that the necessary html elements and javascript are all within the one web page file, so open the file in a browser and it should work.
+
+## Screenshot
+
+ * Sample screen shot using conversion on 8 Amberium coins
+ ![Crossfire Currency Converter sample image](images/crossfire-currency-converter.png)
 
 ## Contributing
 
