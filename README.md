@@ -19,6 +19,8 @@ The web pages are self contained in that the necessary html elements and javascr
 
  * Sample screen shot using conversion on 8 Amberium coins
  ![Crossfire Currency Converter sample image](images/crossfire-currency-converter.png)
+* Sample screen of the Party Experience Calculator with some random levels
+ ![Crossfire Experience Calculator sample image](images/crossfire-party-xp-calculator.png)
 
 ## Contributing
 
