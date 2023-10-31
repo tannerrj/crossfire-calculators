@@ -22,6 +22,11 @@ The web pages are self contained in that the necessary html elements and javascr
 * Sample screen of the Party Experience Calculator with some random levels
  ![Crossfire Experience Calculator sample image](images/crossfire-party-xp-calculator.png)
 
+## Live Web Page
+
+ * [Currency Converter](https://crossfire.real-time.com/resources/calculators/currency-converter.html)
+ * [Party XP Calculator](https://crossfire.real-time.com/resources/calculators/party-xp-calculator.html)
+
 ## Contributing
 
  * Contributions are welcome.
