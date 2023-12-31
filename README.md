@@ -7,6 +7,20 @@ The calculators are HTML and javascript based pages to perform functions such as
  * Money or currency conversions (i.e., gold to silver coins)
  * Party Experience - how much experience does a monster need to have for all members in a party to gain experience for vanquishing that foe(s)
 
+Why is a calculator needed for Party Experience?
+
+From the Crossfire FAQ:
+
+> 3.2.9 How does shared or party experience work?
+
+> Party or shared experience works like this; The server creates a number of “shares” which is the total overall levels of every player in the party, plus 4 for each player. Then the experience is divided up by how many “shares” each group member adds to the total number. That means the experience of the monster has to be at least the sum of the party member levels added together plus 4 * N, where N is the number of members in the party.
+
+> Example: (Level 109 + Level 11 = 120) + (4 (for the level 109 character) + 4 (for the level 11 character)) = 128; the party needs to kill monsters worth at least 128 XP in order to gain experience
+
+> If the monsters that the group is killing give too little (or low) experience to start with, rounding might cause you to be getting no experience.
+
+> Also remember that all members of the party need to be on the same map in order to “share” experience.
+
 ### Requirements
 
 A web browser with javascript enabled.
